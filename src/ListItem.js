@@ -1,6 +1,6 @@
 import React from 'react';
 import './ListItem.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
 
 function ListItem(props){
     const items = props.items;
@@ -12,7 +12,7 @@ function ListItem(props){
              props.setUpdate(e.target.value,item.key)}}/>
         <span>
        
-        <FontAwesomeIcon className="faicons" onClick={() => {
+        <DeleteSweepIcon className="faicons" onClick={() => {
             props.deleteItem(item.key)
         }} icon="trash" />
         </span>

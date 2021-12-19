@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import ListItem from './ListItem';
 import {library} from '@fortawesome/fontawesome-svg-core';
+import { Button } from '@material-ui/core';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -73,7 +74,8 @@ class App extends React.Component {
       <header>
         <form id="to-do-form" onSubmit={this.addItem}>
           <input type="text" placeholder="Enter task" value= {this.state.currentItem.text} onChange={this.handleInput}></input>
-          <button type="submit">Add</button>
+          <br/>
+          <button type="submit">Save</button>
         </form>
         <p>{this.state.items.text}</p>
         
